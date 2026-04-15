@@ -70,14 +70,21 @@ def create_menu_page(parent, items, add_callback):
         img.setFixedHeight(80)
         img.setAlignment(Qt.AlignCenter)
 
-        path = os.path.join(
+        image_base = os.path.join(
             os.path.dirname(__file__),
             "images",
-            name.lower().replace(" ", "_") + ".jpg"
+            name.lower().replace(" ", "_")
         )
 
-        if os.path.exists(path):
-            pixmap = QPixmap(path).scaled(
+        image_path = None
+        for ext in [".jpg", ".jpeg", ".png", ".bmp"]:
+            candidate = image_base + ext
+            if os.path.exists(candidate):
+                image_path = candidate
+                break
+
+        if image_path:
+            pixmap = QPixmap(image_path).scaled(
                 120, 80,
                 Qt.KeepAspectRatio,
                 Qt.SmoothTransformation
