@@ -1,0 +1,71 @@
+[
+    {
+        "time": "22:07:36 15-04-2026",
+        "items": [
+            {
+                "name": "Cappuccino",
+                "qty": 2,
+                "price": 40000
+            },
+            {
+                "name": "Salted Coffee",
+                "qty": 1,
+                "price": 50000
+            },
+            {
+                "name": "Milk Coffee",
+                "qty": 1,
+                "price": 35000
+            },
+            {
+                "name": "Latte",
+                "qty": 1,
+                "price": 45000
+            },
+            {
+                "name": "Espresso",
+                "qty": 1,
+                "price": 30000
+            }
+        ],
+        "total": 240000,
+        "payment": "Tiền mặt"
+    },
+    {
+        "time": "22:07:47 15-04-2026",
+        "items": [
+            {
+                "name": "Salted Coffee",
+                "qty": 5,
+                "price": 50000
+            },
+            {
+                "name": "Milk Coffee",
+                "qty": 3,
+                "price": 35000
+            },
+            {
+                "name": "Latte",
+                "qty": 2,
+                "price": 45000
+            },
+            {
+                "name": "Cappuccino",
+                "qty": 4,
+                "price": 40000
+            },
+            {
+                "name": "Espresso",
+                "qty": 1,
+                "price": 30000
+            },
+            {
+                "name": "Coconut Coffee",
+                "qty": 1,
+                "price": 55000
+            }
+        ],
+        "total": 690000,
+        "payment": "Chuyển khoản"
+    }
+]
