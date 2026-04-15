@@ -7,7 +7,6 @@ from PyQt5.QtWidgets import QGraphicsDropShadowEffect
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.resize(500, 360)
-sdsasadasd
         # ===== MAIN LAYOUT =====
         self.mainLayout = QVBoxLayout(Form)
         self.mainLayout.setContentsMargins(0, 0, 0, 0)
