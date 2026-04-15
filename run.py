@@ -32,7 +32,7 @@ class LoginWindow(QWidget):
             self.ui.password.clear()
             self.ui.password.setFocus()
 
-
+# mấy thg chó c7-102
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
