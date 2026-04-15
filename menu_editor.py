@@ -20,6 +20,7 @@ from PyQt5.QtWidgets import (
 )
 
 
+
 class MenuEditorDialog(QDialog):
     def __init__(self, menu_data, parent=None):
         super().__init__(parent)
