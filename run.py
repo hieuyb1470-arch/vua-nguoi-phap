@@ -13,11 +13,15 @@ class LoginWindow(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
+        self.setWindowTitle("STARBUG - Đăng nhập")
         self.ui.loginBtn.clicked.connect(self.handle_login)
+        self.ui.username.setFocus()
 
     def handle_login(self):
-        user = self.ui.username.text()
+        user = self.ui.username.text().strip()
         pwd = self.ui.password.text()
+
+        self.ui.username.setText(user)
 
         if user == "admin" and pwd == "123":
             self.pos = POS(user)
@@ -25,11 +29,14 @@ class LoginWindow(QWidget):
             self.close()
         else:
             msg.show_warning(self, "Sai tài khoản hoặc mật khẩu!")
+            self.ui.password.clear()
+            self.ui.password.setFocus()
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     app.setStyle("Fusion")
+    app.setApplicationName("STARBUG POS")
 
     window = LoginWindow()
     window.show()
