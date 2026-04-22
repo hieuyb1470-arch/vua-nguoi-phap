@@ -1,0 +1,115 @@
+[
+    {
+        "time": "22:07:36 15-04-2026",
+        "items": [
+            {
+                "name": "Cappuccino",
+                "qty": 2,
+                "price": 40000
+            },
+            {
+                "name": "Salted Coffee",
+                "qty": 1,
+                "price": 50000
+            },
+            {
+                "name": "Milk Coffee",
+                "qty": 1,
+                "price": 35000
+            },
+            {
+                "name": "Latte",
+                "qty": 1,
+                "price": 45000
+            },
+            {
+                "name": "Espresso",
+                "qty": 1,
+                "price": 30000
+            }
+        ],
+        "total": 240000,
+        "payment": "Tiền mặt"
+    },
+    {
+        "time": "22:07:47 15-04-2026",
+        "items": [
+            {
+                "name": "Salted Coffee",
+                "qty": 5,
+                "price": 50000
+            },
+            {
+                "name": "Milk Coffee",
+                "qty": 3,
+                "price": 35000
+            },
+            {
+                "name": "Latte",
+                "qty": 2,
+                "price": 45000
+            },
+            {
+                "name": "Cappuccino",
+                "qty": 4,
+                "price": 40000
+            },
+            {
+                "name": "Espresso",
+                "qty": 1,
+                "price": 30000
+            },
+            {
+                "name": "Coconut Coffee",
+                "qty": 1,
+                "price": 55000
+            }
+        ],
+        "total": 690000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "16:51:06 16-04-2026",
+        "items": [
+            {
+                "name": "khô gà",
+                "qty": 36,
+                "price": 36000
+            }
+        ],
+        "total": 1296000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "16:55:58 16-04-2026",
+        "items": [
+            {
+                "name": "Espresso",
+                "qty": 2,
+                "price": 30000
+            },
+            {
+                "name": "khô gà",
+                "qty": 1,
+                "price": 36000
+            },
+            {
+                "name": "Red Velvet",
+                "qty": 1,
+                "price": 40000
+            },
+            {
+                "name": "Chocolate Roll",
+                "qty": 1,
+                "price": 30000
+            },
+            {
+                "name": "Croissant",
+                "qty": 1,
+                "price": 25000
+            }
+        ],
+        "total": 191000,
+        "payment": "Tiền mặt"
+    }
+]

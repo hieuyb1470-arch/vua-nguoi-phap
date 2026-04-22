@@ -7,6 +7,7 @@ from PyQt5.QtWidgets import QGraphicsDropShadowEffect
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.resize(500, 360)
+        Form.setWindowTitle("STARBUG - Đăng nhập")
         # ===== MAIN LAYOUT =====
         self.mainLayout = QVBoxLayout(Form)
         self.mainLayout.setContentsMargins(0, 0, 0, 0)
@@ -64,6 +65,7 @@ class Ui_Form(object):
         self.formLayout.addWidget(QLabel("Username"))
         self.username = QLineEdit()
         self.username.setFixedHeight(32)
+        self.username.setPlaceholderText("Nhập tên đăng nhập")
         self.username.setStyleSheet("""
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -76,6 +78,7 @@ class Ui_Form(object):
         self.password = QLineEdit()
         self.password.setEchoMode(QLineEdit.Password)
         self.password.setFixedHeight(32)
+        self.password.setPlaceholderText("Nhập mật khẩu")
         self.password.setStyleSheet("""
             border: 1px solid #ccc;
             border-radius: 8px;
@@ -87,6 +90,8 @@ class Ui_Form(object):
         self.loginBtn = QPushButton("Log in")
         self.loginBtn.setFixedHeight(40)
         self.loginBtn.setCursor(Qt.PointingHandCursor)
+        self.loginBtn.setDefault(True)
+        self.loginBtn.setAutoDefault(True)
 
         self.loginBtn.setStyleSheet("""
             QPushButton {
@@ -109,3 +114,6 @@ class Ui_Form(object):
         # ===== ADD TO CENTER =====
         self.centerLayout.addWidget(self.loginBox)
         self.mainLayout.addWidget(self.centerWidget)
+
+        self.username.returnPressed.connect(self.loginBtn.click)
+        self.password.returnPressed.connect(self.loginBtn.click)

@@ -1,0 +1,3 @@
+﻿time,payment,total,item_count,items_json,items_summary
+16:51:06 16-04-2026,Chuyển khoản,1296000,1,"[{""name"": ""khô gà"", ""qty"": 36, ""price"": 36000}]",khô gà x36 = 1296000
+16:55:58 16-04-2026,Tiền mặt,191000,5,"[{""name"": ""Espresso"", ""qty"": 2, ""price"": 30000}, {""name"": ""khô gà"", ""qty"": 1, ""price"": 36000}, {""name"": ""Red Velvet"", ""qty"": 1, ""price"": 40000}, {""name"": ""Chocolate Roll"", ""qty"": 1, ""price"": 30000}, {""name"": ""Croissant"", ""qty"": 1, ""price"": 25000}]",Espresso x2 = 60000; khô gà x1 = 36000; Red Velvet x1 = 40000; Chocolate Roll x1 = 30000; Croissant x1 = 25000

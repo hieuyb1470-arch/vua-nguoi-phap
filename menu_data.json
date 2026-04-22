@@ -1,0 +1,26 @@
+{
+    "coffee": {
+        "Espresso": 30000,
+        "Cappuccino": 40000,
+        "Latte": 45000,
+        "Salted Coffee": 50000,
+        "Milk Coffee": 35000,
+        "Coconut Coffee": 55000
+    },
+    "juice": {
+        "Apple": 30000,
+        "Orange": 30000,
+        "Lime": 25000,
+        "Pineapple": 35000,
+        "Passion": 30000,
+        "Watermelon": 30000
+    },
+    "dessert": {
+        "Croissant": 25000,
+        "Chocolate Roll": 30000,
+        "Brownie": 35000,
+        "Red Velvet": 40000,
+        "Cheese Cake": 45000,
+        "khô gà": 36000
+    }
+}
