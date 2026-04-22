@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [
     {
         "time": "22:07:36 15-04-2026",
@@ -112,77 +111,104 @@
         ],
         "total": 191000,
         "payment": "Tiền mặt"
-    }
-=======
-[
-    {
-        "time": "22:07:36 15-04-2026",
-        "items": [
-            {
-                "name": "Cappuccino",
-                "qty": 2,
-                "price": 40000
-            },
-            {
-                "name": "Salted Coffee",
-                "qty": 1,
-                "price": 50000
-            },
-            {
-                "name": "Milk Coffee",
-                "qty": 1,
-                "price": 35000
-            },
-            {
-                "name": "Latte",
-                "qty": 1,
-                "price": 45000
-            },
-            {
-                "name": "Espresso",
-                "qty": 1,
-                "price": 30000
-            }
-        ],
-        "total": 240000,
-        "payment": "Tiền mặt"
     },
     {
-        "time": "22:07:47 15-04-2026",
+        "time": "13:47:05 22-04-2026",
         "items": [
             {
                 "name": "Salted Coffee",
-                "qty": 5,
+                "qty": 1,
+                "price": 50000
+            }
+        ],
+        "total": 50000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "13:48:18 22-04-2026",
+        "items": [
+            {
+                "name": "Salted Coffee",
+                "qty": 1,
+                "price": 50000
+            }
+        ],
+        "total": 50000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "13:49:30 22-04-2026",
+        "items": [
+            {
+                "name": "Salted Coffee",
+                "qty": 1,
+                "price": 50000
+            }
+        ],
+        "total": 50000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "13:56:47 22-04-2026",
+        "items": [
+            {
+                "name": "Salted Coffee",
+                "qty": 1,
                 "price": 50000
             },
             {
                 "name": "Milk Coffee",
-                "qty": 3,
+                "qty": 1,
                 "price": 35000
+            }
+        ],
+        "total": 85000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "13:58:28 22-04-2026",
+        "items": [
+            {
+                "name": "Salted Coffee",
+                "qty": 1,
+                "price": 50000
             },
             {
+                "name": "Milk Coffee",
+                "qty": 1,
+                "price": 35000
+            }
+        ],
+        "total": 85000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "13:59:21 22-04-2026",
+        "items": [
+            {
+                "name": "Milk Coffee",
+                "qty": 1,
+                "price": 35000
+            }
+        ],
+        "total": 35000,
+        "payment": "Chuyển khoản"
+    },
+    {
+        "time": "14:01:47 22-04-2026",
+        "items": [
+            {
                 "name": "Latte",
-                "qty": 2,
+                "qty": 1,
                 "price": 45000
             },
             {
                 "name": "Cappuccino",
-                "qty": 4,
+                "qty": 1,
                 "price": 40000
-            },
-            {
-                "name": "Espresso",
-                "qty": 1,
-                "price": 30000
-            },
-            {
-                "name": "Coconut Coffee",
-                "qty": 1,
-                "price": 55000
             }
         ],
-        "total": 690000,
+        "total": 85000,
         "payment": "Chuyển khoản"
     }
->>>>>>> a77523f56544f87fe42296048d37b972e13949f6
 ]

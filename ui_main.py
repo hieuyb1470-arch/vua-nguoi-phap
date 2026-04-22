@@ -13,6 +13,14 @@ from ui_menu import create_menu_page
 from payment_dialog import PaymentDialog
 from menu_editor import MenuEditorDialog
 
+from qr_dialog import QRDialog
+
+def get_qr_url(amount, order_id):
+    bank_code = "BIDV"          # ngân hàng (VD: VCB, TCB, BIDV...)
+    account_no = "3711503588"   # số tài khoản của bạn
+    description = f"DH{order_id}"
+
+    return f"https://img.vietqr.io/image/{bank_code}-{account_no}-compact.png?amount={amount}&addInfo={description}"
 
 class POS(QWidget):
     def __init__(self, user):
@@ -183,14 +191,8 @@ class POS(QWidget):
             self.menu = dialog.get_menu_data()
             self.refresh_current_menu_page()
 
-<<<<<<< HEAD
 
   
-=======
-    # =========================
-    # MENU FILTER / CATEGORY
-    # =========================
->>>>>>> a77523f56544f87fe42296048d37b972e13949f6
     def build_menu_pages(self):
         while self.stacked.count():
             widget = self.stacked.widget(0)
@@ -227,11 +229,7 @@ class POS(QWidget):
         self.current_category_index = current_index
         self.stacked.setCurrentIndex(current_index)
 
-<<<<<<< HEAD
 
-=======
-    # =========================
->>>>>>> a77523f56544f87fe42296048d37b972e13949f6
     # ADD ITEM
 
     def add_item(self, name, price):
@@ -272,7 +270,6 @@ class POS(QWidget):
                 if item.data(Qt.UserRole) == selected_name:
                     self.listWidget.setCurrentItem(item)
                     break
-<<<<<<< HEAD
 
     def get_selected_cart_name(self):
         item = self.listWidget.currentItem()
@@ -331,76 +328,6 @@ class POS(QWidget):
 
         self.cart.clear()
         self.refresh_cart()
-=======
-
-    def get_selected_cart_name(self):
-        item = self.listWidget.currentItem()
-        if item:
-            return item.data(Qt.UserRole)
-        return None
-
-    # =========================
-    # CART ACTIONS
-    # =========================
-    def decrease_item(self, name):
-        if name in self.cart:
-            self.cart[name]["qty"] -= 1
-            if self.cart[name]["qty"] <= 0:
-                del self.cart[name]
-            self.refresh_cart()
-
-    def increase_item(self, name):
-        if name in self.cart:
-            self.cart[name]["qty"] += 1
-            self.refresh_cart()
-
-    def remove_item_completely(self, name):
-        if name in self.cart:
-            del self.cart[name]
-            self.refresh_cart()
-
-    def decrease_selected_item(self):
-        name = self.get_selected_cart_name()
-        if not name:
-            msg.show_warning(self, "Vui lòng chọn món trong giỏ hàng!")
-            return
-        self.decrease_item(name)
-
-    def increase_selected_item(self):
-        name = self.get_selected_cart_name()
-        if not name:
-            msg.show_warning(self, "Vui lòng chọn món trong giỏ hàng!")
-            return
-        self.increase_item(name)
-
-    def remove_selected_item(self):
-        name = self.get_selected_cart_name()
-        if not name:
-            msg.show_warning(self, "Vui lòng chọn món trong giỏ hàng!")
-            return
-        self.remove_item_completely(name)
-
-    def clear_cart(self):
-        if not self.cart:
-            msg.show_warning(self, "Giỏ hàng đang trống!")
-            return
-
-        if not msg.confirm(self, "Xóa toàn bộ giỏ hàng?"):
-            return
-
-        self.cart.clear()
-        self.refresh_cart()
-
-    # =========================
-    # REMOVE ITEM
-    # =========================
-    def remove_item(self, item):
-        name = item.data(Qt.UserRole)
-        if not name:
-            name = item.text().split(" x")[0]
-
-        self.decrease_item(name)
->>>>>>> a77523f56544f87fe42296048d37b972e13949f6
 
    
     # REMOVE ITEM
@@ -458,6 +385,10 @@ class POS(QWidget):
             self.manager.save_history()
             self.manager.save_to_excel(order)
 
+            if payment_method == "Chuyển khoản":
+                order_id = len(self.manager.history) - 1
+                self.open_qr_dialog(self.total, order_id)
+
             msg.show_info(self, "Thanh toán thành công!")
 
             self.cart.clear()
@@ -465,7 +396,13 @@ class POS(QWidget):
 
         except Exception as e:
             msg.show_warning(self, f"Lỗi hệ thống: {str(e)}")
+    def open_qr_dialog(self, amount, order_id):
+        total_amount = self.format_money(amount)
+        order_id = f"DH{order_id}"
 
+        qr_url = get_qr_url(amount, order_id) 
+        dialog = QRDialog(qr_url)   
+        dialog.exec_()
     # HISTORY
   
     def show_history(self):
