@@ -74,7 +74,6 @@ class HistoryDialog(QDialog):
 
     def show_summary(self):
         summary = {}
-        items.sort(key=lambda x: self.clean_name(x.get("name", "")))
 
         for order in self.history:
             for item in self.normalize_items(order.get("items", [])):
@@ -87,7 +86,7 @@ class HistoryDialog(QDialog):
             QMessageBox.information(self, "Thông báo", "Không có dữ liệu")
             return
 
-        text = "=== Tổng tất cả đơn ===\n\n"
+        text = "-- Tổng tất cả đơn \n\n"
         for name, qty in summary.items():
             text += f"{name}: {qty}\n"
 
