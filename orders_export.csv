@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 ﻿time,payment,total,item_count,items_json,items_summary
 16:51:06 16-04-2026,Chuyển khoản,1296000,1,"[{""name"": ""khô gà"", ""qty"": 36, ""price"": 36000}]",khô gà x36 = 1296000
 16:55:58 16-04-2026,Tiền mặt,191000,5,"[{""name"": ""Espresso"", ""qty"": 2, ""price"": 30000}, {""name"": ""khô gà"", ""qty"": 1, ""price"": 36000}, {""name"": ""Red Velvet"", ""qty"": 1, ""price"": 40000}, {""name"": ""Chocolate Roll"", ""qty"": 1, ""price"": 30000}, {""name"": ""Croissant"", ""qty"": 1, ""price"": 25000}]",Espresso x2 = 60000; khô gà x1 = 36000; Red Velvet x1 = 40000; Chocolate Roll x1 = 30000; Croissant x1 = 25000
+=======
+﻿time,payment,total,item_count,items_json,items_summary
+22:07:36 15-04-2026,Tiền mặt,240000,5,"[{""name"": ""Cappuccino"", ""qty"": 2, ""price"": 40000}, {""name"": ""Salted Coffee"", ""qty"": 1, ""price"": 50000}, {""name"": ""Milk Coffee"", ""qty"": 1, ""price"": 35000}, {""name"": ""Latte"", ""qty"": 1, ""price"": 45000}, {""name"": ""Espresso"", ""qty"": 1, ""price"": 30000}]",Cappuccino x2 = 80000; Salted Coffee x1 = 50000; Milk Coffee x1 = 35000; Latte x1 = 45000; Espresso x1 = 30000
+22:07:47 15-04-2026,Chuyển khoản,690000,6,"[{""name"": ""Salted Coffee"", ""qty"": 5, ""price"": 50000}, {""name"": ""Milk Coffee"", ""qty"": 3, ""price"": 35000}, {""name"": ""Latte"", ""qty"": 2, ""price"": 45000}, {""name"": ""Cappuccino"", ""qty"": 4, ""price"": 40000}, {""name"": ""Espresso"", ""qty"": 1, ""price"": 30000}, {""name"": ""Coconut Coffee"", ""qty"": 1, ""price"": 55000}]",Salted Coffee x5 = 250000; Milk Coffee x3 = 105000; Latte x2 = 90000; Cappuccino x4 = 160000; Espresso x1 = 30000; Coconut Coffee x1 = 55000
+>>>>>>> a77523f56544f87fe42296048d37b972e13949f6

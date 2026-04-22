@@ -61,6 +61,7 @@ class HistoryDialog(QDialog):
 
         layout.addWidget(self.listWidget)
 
+<<<<<<< HEAD
     def clean_name(self, name):
         name = name.lower().strip()
 
@@ -133,6 +134,8 @@ class HistoryDialog(QDialog):
 
         dialog.exec_()
 
+=======
+>>>>>>> a77523f56544f87fe42296048d37b972e13949f6
     def format_money(self, value):
         return f"{self.parse_money(value):,}".replace(",", ".")
 

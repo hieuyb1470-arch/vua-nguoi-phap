@@ -183,8 +183,14 @@ class POS(QWidget):
             self.menu = dialog.get_menu_data()
             self.refresh_current_menu_page()
 
+<<<<<<< HEAD
 
   
+=======
+    # =========================
+    # MENU FILTER / CATEGORY
+    # =========================
+>>>>>>> a77523f56544f87fe42296048d37b972e13949f6
     def build_menu_pages(self):
         while self.stacked.count():
             widget = self.stacked.widget(0)
@@ -221,7 +227,11 @@ class POS(QWidget):
         self.current_category_index = current_index
         self.stacked.setCurrentIndex(current_index)
 
+<<<<<<< HEAD
 
+=======
+    # =========================
+>>>>>>> a77523f56544f87fe42296048d37b972e13949f6
     # ADD ITEM
 
     def add_item(self, name, price):
@@ -262,6 +272,7 @@ class POS(QWidget):
                 if item.data(Qt.UserRole) == selected_name:
                     self.listWidget.setCurrentItem(item)
                     break
+<<<<<<< HEAD
 
     def get_selected_cart_name(self):
         item = self.listWidget.currentItem()
@@ -320,6 +331,76 @@ class POS(QWidget):
 
         self.cart.clear()
         self.refresh_cart()
+=======
+
+    def get_selected_cart_name(self):
+        item = self.listWidget.currentItem()
+        if item:
+            return item.data(Qt.UserRole)
+        return None
+
+    # =========================
+    # CART ACTIONS
+    # =========================
+    def decrease_item(self, name):
+        if name in self.cart:
+            self.cart[name]["qty"] -= 1
+            if self.cart[name]["qty"] <= 0:
+                del self.cart[name]
+            self.refresh_cart()
+
+    def increase_item(self, name):
+        if name in self.cart:
+            self.cart[name]["qty"] += 1
+            self.refresh_cart()
+
+    def remove_item_completely(self, name):
+        if name in self.cart:
+            del self.cart[name]
+            self.refresh_cart()
+
+    def decrease_selected_item(self):
+        name = self.get_selected_cart_name()
+        if not name:
+            msg.show_warning(self, "Vui lòng chọn món trong giỏ hàng!")
+            return
+        self.decrease_item(name)
+
+    def increase_selected_item(self):
+        name = self.get_selected_cart_name()
+        if not name:
+            msg.show_warning(self, "Vui lòng chọn món trong giỏ hàng!")
+            return
+        self.increase_item(name)
+
+    def remove_selected_item(self):
+        name = self.get_selected_cart_name()
+        if not name:
+            msg.show_warning(self, "Vui lòng chọn món trong giỏ hàng!")
+            return
+        self.remove_item_completely(name)
+
+    def clear_cart(self):
+        if not self.cart:
+            msg.show_warning(self, "Giỏ hàng đang trống!")
+            return
+
+        if not msg.confirm(self, "Xóa toàn bộ giỏ hàng?"):
+            return
+
+        self.cart.clear()
+        self.refresh_cart()
+
+    # =========================
+    # REMOVE ITEM
+    # =========================
+    def remove_item(self, item):
+        name = item.data(Qt.UserRole)
+        if not name:
+            name = item.text().split(" x")[0]
+
+        self.decrease_item(name)
+>>>>>>> a77523f56544f87fe42296048d37b972e13949f6
 
    
     # REMOVE ITEM
